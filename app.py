@@ -22,7 +22,7 @@ disp_button = st.button('Construir grafico de dispersión')#Crea un boton para g
 if disp_button:
     st.write('Scatter plot')
     #Crea un grafico de dispersión
-    fig1 = px.scatter(vehicles, bin_size=[.25])
+    fig1 = px.scatter(vehicles, x='odometer', y='price')
     #Mostrar grafico de dispersión interactivo
     st.plotly_chart(fig1, use_container_width=True)
      
